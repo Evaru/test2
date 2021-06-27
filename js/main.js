@@ -59,7 +59,7 @@ async function getTable() {
             }
 
         }
-        
+     
         if(data[1]){
                 let dataLocal = data[1]
                 for (var key in dataLocal) {
@@ -71,14 +71,29 @@ async function getTable() {
             arrayTodayValue=arrayTodayValue.map(Number)
             arrayLastValue=arrayLastValue.map(Number)
     
+         
+            let resultTotal = ( 100.0 * (todayTotal.textContent - lastTotal.textContent) / todayTotal.textContent)
+            resultTotal=Math.floor(resultTotal)
+            if(resultTotal>0){
+                lastTotal.innerHTML+=`<strong>+${resultTotal}%</strong>`
+                lastTotal.classList.add('plus')
+                
+            }
+            if(0>resultTotal){
+                lastTotal.innerHTML+=`<strong>${resultTotal}%</strong>`
+                lastTotal.classList.add('minus')
+                
+            }
+            if(resultTotal<=-10){
+                lastTotal.classList.add('overMinus')
+                
+            }
+           
             function deepEqual (){
                 for (let i = 0; i < arrayTodayValue.length; i++) {
                     let result = ( 100.0 * (arrayTodayValue[i] - arrayLastValue[i]) / arrayLastValue[i])
                     result=Math.floor(result)
-                    // if(result>0){
-                    //     result=`+${result}`
-
-                    // }
+                    
                     percent.push({result})
                     
                 }
