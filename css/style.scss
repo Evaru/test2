@@ -1,0 +1,202 @@
+body,
+html {
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 380px;
+    // height: 400px;
+    background: #f8f8f8;
+    align-items: center;
+    color: #818181;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    border: 5px solid #f5f5f5;
+    .statistics {
+        display: flex;
+        width: 360px;
+        background: white;
+        height: 20px;
+        padding: 10px;
+        justify-content: space-between;
+        p {
+            margin: 0;
+        }
+        .icons {
+            display: flex;
+            .statistics__update {
+                transform: scale(1, -1);
+                height: 17px;
+            }
+            .statistics__update,
+            .statistics__settings,
+            .statistics__close {
+                cursor: pointer;
+                margin-left: 15px;
+            }
+            .statistics__settings {
+                ul {
+                    display: none;
+                }
+            }
+            .actived {
+                ul {
+                    display: block;
+                    position: absolute;
+                    background: white;
+                    list-style: none;
+                    width: 100px;
+                    font-size: 10px;
+                    border: 2px solid;
+                    padding: 10px 0;
+                    text-align: center;
+                    white-space: nowrap;
+                    li {
+                        font-weight: bold;
+                        &:hover {
+                            color: #3e8ead;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .colorChange {
+        color: green;
+    }
+    .highcharts-figure {
+        width: 380px;
+        margin: 0;
+
+        #container {
+            height: 200px;
+        }
+        .highcharts-container {
+            // height: 200px !important;
+            width: 360px;
+            .highcharts-axis,
+            .highcharts-series-label,
+            .highcharts-exporting-group,
+            .highcharts-title,
+            .highcharts-legend,
+            .highcharts-credits {
+                display: none;
+            }
+        }
+
+        svg.highcharts-root {
+            // height: 200px;
+            width: 380px;
+        }
+    }
+    table {
+        border-spacing: 0;
+        a {
+            cursor: pointer;
+            color: green;
+            font-weight: bold;
+        }
+        thead {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            td[data-id="0"],
+            td[data-id="1"] {
+                padding: 0;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background: #77a7c0;
+                    color: white;
+                }
+            }
+            td.activedThead {
+                background: #77a7c0;
+                color: white;
+            }
+        }
+        td:nth-child(1) {
+            width: 40%;
+            padding-left: 10px;
+        }
+        td {
+            width: 30%;
+            border: 1px solid white;
+            font-size: 14px;
+            padding: 10px 0;
+        }
+        td[data-id="0"],
+        td[data-id="1"] {
+            text-align: right;
+            padding-right: 30px;
+            white-space: nowrap;
+            strong {
+                margin-left: 10px;
+            }
+        }
+        td[data-id="1"] {
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+        td:nth-child(2) {
+            background: #eef9ff;
+        }
+    }
+    .table-title {
+        width: 100%;
+    }
+    .plus {
+        background: #e7f6df;
+        strong {
+            color: #618449;
+        }
+    }
+    .minus {
+        strong {
+            color: #e58385;
+        }
+    }
+    .overMinus {
+        background: #fbdad5;
+        strong {
+            color: #e58385;
+        }
+    }
+}
+
+.closed {
+    .table-title,
+    .highcharts-figure {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 300px;
+        table {
+            td {
+                font-size: 10px;
+            }
+        }
+        .statistics {
+            width: 280px;
+        }
+        .highcharts-figure {
+            width: 300px;
+            svg.highcharts-root {
+                width: 300px;
+            }
+        }
+        table td[data-id="0"],
+        table td[data-id="1"] {
+            padding-left: 10px;
+        }
+    }
+}

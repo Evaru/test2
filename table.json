@@ -1,0 +1,28 @@
+[
+    {
+            "cash":"300 000",
+            "cashless":"100 000",
+            "credit":"100 521",
+            "averageСheck":"1 300",
+            "averageGuest":"1 200",
+            "removeCheckAfter":"1 000",
+            "removeCheckBefore":"1 300",
+            "countCheck":"34",
+            "countGuest":"34"
+
+        
+    },
+    {
+            "cash":"280 000",
+            "cashless":"100 000",
+            "credit":"100 521",
+            "averageСheck":"900",
+            "averageGuest":"800",
+            "removeCheckAfter":"1 100",
+            "removeCheckBefore":"1 300",
+            "countCheck":"36",
+            "countGuest":"36"
+
+        
+    }
+]

@@ -1,0 +1,241 @@
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  width: 380px;
+  background: #f8f8f8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #818181;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  border: 5px solid #f5f5f5;
+}
+
+main .statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 360px;
+  background: white;
+  height: 20px;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .statistics p {
+  margin: 0;
+}
+
+main .statistics .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .statistics .icons .statistics__update {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  height: 17px;
+}
+
+main .statistics .icons .statistics__update,
+main .statistics .icons .statistics__settings,
+main .statistics .icons .statistics__close {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+main .statistics .icons .statistics__settings ul {
+  display: none;
+}
+
+main .statistics .icons .actived ul {
+  display: block;
+  position: absolute;
+  background: white;
+  list-style: none;
+  width: 100px;
+  font-size: 10px;
+  border: 2px solid;
+  padding: 10px 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+main .statistics .icons .actived ul li {
+  font-weight: bold;
+}
+
+main .statistics .icons .actived ul li:hover {
+  color: #3e8ead;
+}
+
+main .colorChange {
+  color: green;
+}
+
+main .highcharts-figure {
+  width: 380px;
+  margin: 0;
+}
+
+main .highcharts-figure #container {
+  height: 200px;
+}
+
+main .highcharts-figure .highcharts-container {
+  width: 360px;
+}
+
+main .highcharts-figure .highcharts-container .highcharts-axis,
+main .highcharts-figure .highcharts-container .highcharts-series-label,
+main .highcharts-figure .highcharts-container .highcharts-exporting-group,
+main .highcharts-figure .highcharts-container .highcharts-title,
+main .highcharts-figure .highcharts-container .highcharts-legend,
+main .highcharts-figure .highcharts-container .highcharts-credits {
+  display: none;
+}
+
+main .highcharts-figure svg.highcharts-root {
+  width: 380px;
+}
+
+main table {
+  border-spacing: 0;
+}
+
+main table a {
+  cursor: pointer;
+  color: green;
+  font-weight: bold;
+}
+
+main table thead {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+main table thead td[data-id="0"],
+main table thead td[data-id="1"] {
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+main table thead td[data-id="0"]:hover,
+main table thead td[data-id="1"]:hover {
+  background: #77a7c0;
+  color: white;
+}
+
+main table thead td.activedThead {
+  background: #77a7c0;
+  color: white;
+}
+
+main table td:nth-child(1) {
+  width: 40%;
+  padding-left: 10px;
+}
+
+main table td {
+  width: 30%;
+  border: 1px solid white;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+main table td[data-id="0"],
+main table td[data-id="1"] {
+  text-align: right;
+  padding-right: 30px;
+  white-space: nowrap;
+}
+
+main table td[data-id="0"] strong,
+main table td[data-id="1"] strong {
+  margin-left: 10px;
+}
+
+main table td[data-id="1"] {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+main table td:nth-child(2) {
+  background: #eef9ff;
+}
+
+main .table-title {
+  width: 100%;
+}
+
+main .plus {
+  background: #e7f6df;
+}
+
+main .plus strong {
+  color: #618449;
+}
+
+main .minus strong {
+  color: #e58385;
+}
+
+main .overMinus {
+  background: #fbdad5;
+}
+
+main .overMinus strong {
+  color: #e58385;
+}
+
+.closed .table-title,
+.closed .highcharts-figure {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    width: 300px;
+  }
+  main table td {
+    font-size: 10px;
+  }
+  main .statistics {
+    width: 280px;
+  }
+  main .highcharts-figure {
+    width: 300px;
+  }
+  main .highcharts-figure svg.highcharts-root {
+    width: 300px;
+  }
+  main table td[data-id="0"],
+  main table td[data-id="1"] {
+    padding-left: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

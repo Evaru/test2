@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="statistics">
+            <div class="statistics__title"><p>Общая статистика</p></div>
+            <div class="icons">
+                <div class="statistics__update"><i class="fa fa-refresh" aria-hidden="true"></i></div>
+                <div class="statistics__settings">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <ul class="color">
+                        <li >Поменять цвет</li>
+                    </ul>
+                </div>
+                <div class="statistics__close"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <table class="table-title">
+            <thead>
+            <tr>
+                <td>Показатель</td>
+                <td data-id="0">Текущий день</td>
+                <td data-id="1">Вчера</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Выручка,руб</td>
+                <td id="todayTotal"  data-id="0"></td>
+                <td id="lastTotal" data-id="1"></td>
+            </tr>
+            </tbody>
+        </table>
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            </figure>
+        <table class="table-body">
+           
+        </table>
+    </main>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
